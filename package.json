@@ -1,0 +1,38 @@
+{
+  "name": "get-catalogue",
+  "private": false,
+  "version": "1.0.0",
+  "author": "JsMuYun",
+  "description": "获取代码中的h标签，生成树形结构，以方便创建目录效果。",
+  "keywords": [
+    "catalogue",
+    "getCatalogue"
+  ],
+  "homepage": "",
+  "bugs": "",
+  "type": "module",
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/getCatalogue.mjs",
+  "types": "./dist/getCatalogue.d.ts",
+  "exports": {
+    ".": {
+      "import": "./dist/getCatalogue.mjs",
+      "require": "./dist/getCatalogue.cjs",
+      "types": "./dist/getCatalogue.d.ts"
+    }
+  },
+  "scripts": {
+    "build": "rollup --config rollup.config.ts --configPlugin @rollup/plugin-typescript --bundleConfigAsCjs"
+  },
+  "license": "ISC",
+  "devDependencies": {
+    "@rollup/plugin-typescript": "^11.1.5",
+    "@types/node": "^20.10.4",
+    "rollup": "^4.7.0",
+    "rollup-plugin-dts": "^6.1.0",
+    "tslib": "^2.6.2",
+    "typescript": "^5.3.2"
+  }
+}
